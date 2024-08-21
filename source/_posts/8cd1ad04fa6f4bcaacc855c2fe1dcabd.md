@@ -1,76 +1,57 @@
 ---
 layout: post
-title: 1. Welcome to Joplin!
+title: 요구 사항(Requirement)
 abbrlink: 8cd1ad04fa6f4bcaacc855c2fe1dcabd
 tags: []
 categories:
   - 환영합니다!
 date: 1724058466012
-updated: 1724058466012
+updated: 1724240339966
 ---
 
-Joplin is a free, open source note taking and to-do application, which helps you write and organise your notes, and synchronise them between your devices. The notes are searchable, can be copied, tagged and modified either from the application directly or from your own text editor. The notes are in [Markdown format](https://joplinapp.org/help/apps/markdown). Joplin is available as a **desktop**, **mobile** and **terminal** application.
+## 요구 사항 (Requirements)
 
-The notes in this notebook give an overview of what Joplin can do and how to use it. In general, the three applications share roughly the same functionalities; any differences will be clearly indicated.
+- 그림판 프로그램 개발 예시로 함께 이해 해 보자.
 
-![](/resources/bcbe3789848b4eb4aaf286e9b9b4a03e.png)
+### 표
 
-## Joplin is divided into three parts
+아래 네 가지 필드는 필수 값 입니다.
 
-Joplin has three main columns:
+- Requirement ID
+- Requirement Name
+- Description
+- erification Method
 
-- **Sidebar** contains the list of your notebooks and tags, as well as the synchronisation status.
+| Requirement ID (required) | Requirement Name (required) | Description (required)                | Verification Method (required) | Priority | Status   | Source | Related Requirements | Rationale                      |
+| ------------------------- | --------------------------- | ------------------------------------- | ------------------------------ | -------- | -------- | ------ | -------------------- | ------------------------------ |
+| REQ-001                   | 기본 도형 그리기                   | 사용자가 사각형, 원, 선 등의 기본 도형을 그릴 수 있어야 한다. | 테스트                            | High     | Proposed | 고객 요청  | REQ-002, REQ-003     | 기본적인 그림판 기능 제공을 위해 필요하다.       |
+| REQ-002                   | 색상 선택                       | 사용자가 도형의 색상을 선택할 수 있어야 한다.            | 테스트                            | Medium   | Proposed | 고객 요청  | REQ-001              | 사용자가 원하는 색상으로 도형을 꾸미기 위해 필요하다. |
+| REQ-003                   | 저장 기능                       | 사용자가 작업한 그림을 파일로 저장할 수 있어야 한다.        | 테스트                            | High     | Proposed | 고객 요청  | REQ-004              | 작업 내용을 잃지 않기 위해 필수적이다.         |
+| REQ-004                   | 불러오기 기능                     | 사용자가 기존에 저장된 그림 파일을 불러올 수 있어야 한다.     | 테스트                            | High     | Proposed | 고객 요청  | REQ-003              | 이전 작업을 이어서 할 수 있게 하기 위해 필요하다.  |
 
-- **Note List** contains the current list of notes - either the notes in the currently selected notebook, the notes in the currently selected tag, or search results.
+### 필드와 값
 
-- **Note Editor** is the place where you write your notes. There is a **Rich Text editor** and a **Markdown editor** - click on the **Toggle editor** button in the top right hand corner to switch between both! You may also use an [external editor](https://joplinapp.org/help/apps/external_text_editor) to edit notes. For example you can use Typora as an external editor and it will display the note as well as any embedded images.
+하위 필드의 값이 한정적인 필드와 그 값 목록.
 
-## Writing notes in Markdown
+1. **Status (상태)**
+   - Proposed (제안됨)
+   - Approved (승인됨)
+   - Implemented (구현됨)
+   - Verified (검증됨)
+   - Rejected (거부됨)
 
-Markdown is a lightweight markup language with plain text formatting syntax. Joplin supports a [Github-flavoured Markdown syntax](https://joplinapp.org/help/apps/markdown) with a few variations and additions.
+2. **Priority (우선순위)**
+   - High (높음)
+   - Medium (중간)
+   - Low (낮음)
 
-In general, while Markdown is a markup language, it is meant to be human readable, even without being rendered. This is a simple example (you can see how it looks in the viewer panel):
+3. **Verification Method (검증 방법)**
+   - Test (테스트)
+   - Analysis (분석)
+   - Review (검토)
 
-***
-
-# Heading
-
-## Sub-heading
-
-Paragraphs are separated by a blank line. Text attributes *italic*, **bold** and `monospace` are supported. You can create bullet lists:
-
-- apples
-- oranges
-- pears
-
-Or numbered lists:
-
-1. wash
-2. rinse
-3. repeat
-
-This is a [link](https://joplinapp.org) and, finally, below is a horizontal rule:
-
-***
-
-A lot more is possible including adding code samples, math formulae or checkbox lists - see the [Markdown documentation](https://joplinapp.org/help/apps/markdown) for more information.
-
-## Organising your notes
-
-### With notebooks
-
-Joplin notes are organised into a tree of notebooks and sub-notebooks.
-
-- On **desktop**, you can create a notebook by clicking on New Notebook, then you can drag and drop them into other notebooks to organise them as you wish.
-- On **mobile**, press the "+" icon and select "New notebook".
-- On **terminal**, press `:mn`
-
-![](/resources/9d33376a7dc84cca8a2e0a44f48296e0.png)
-
-### With tags
-
-The second way to organise your notes is using tags:
-
-- On **desktop**, right-click on any note in the Note List, and select "Edit tags". You can then add the tags, separating them by commas.
-- On **mobile**, open the note and press the "⋮" button and select "Tags".
-- On **terminal**, type `:help tag` for the available commands.
+4. **Source (출처)**
+   - Customer Request (고객 요청)
+   - Legal Requirement (법적 요구사항)
+   - Stakeholder Input (이해관계자 의견)
+   - Market Research (시장 조사)
