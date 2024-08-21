@@ -2,27 +2,21 @@
 layout: post
 title: 요구 사항(Requirement)
 abbrlink: 8cd1ad04fa6f4bcaacc855c2fe1dcabd
-tags: []
+tags:
+  - requirements definition
 categories:
-  - 환영합니다!
+  - 프로그램 친화적 설계
 date: 1724058466012
-updated: 1724240339966
+updated: 1724243133848
 ---
 
 ## 요구 사항 (Requirements)
 
-- 그림판 프로그램 개발 예시로 함께 이해 해 보자.
+시스템이 만족해야 할 요구 사항들을 정의합니다. 이 단계에서 기능적 요구 사항, 비기능적 요구 사항 등을 모두 포함해야 합니다.
 
 ### 표
 
-아래 네 가지 필드는 필수 값 입니다.
-
-- Requirement ID
-- Requirement Name
-- Description
-- erification Method
-
-| Requirement ID (required) | Requirement Name (required) | Description (required)                | Verification Method (required) | Priority | Status   | Source | Related Requirements | Rationale                      |
+| Requirement ID (required) | Requirement Name (required) | Description                           | Verification Method (required) | Priority | Status   | Source | Related Requirements | Rationale                      |
 | ------------------------- | --------------------------- | ------------------------------------- | ------------------------------ | -------- | -------- | ------ | -------------------- | ------------------------------ |
 | REQ-001                   | 기본 도형 그리기                   | 사용자가 사각형, 원, 선 등의 기본 도형을 그릴 수 있어야 한다. | 테스트                            | High     | Proposed | 고객 요청  | REQ-002, REQ-003     | 기본적인 그림판 기능 제공을 위해 필요하다.       |
 | REQ-002                   | 색상 선택                       | 사용자가 도형의 색상을 선택할 수 있어야 한다.            | 테스트                            | Medium   | Proposed | 고객 요청  | REQ-001              | 사용자가 원하는 색상으로 도형을 꾸미기 위해 필요하다. |
@@ -46,6 +40,7 @@ updated: 1724240339966
    - Low (낮음)
 
 3. **Verification Method (검증 방법)**
+   - *Required*
    - Test (테스트)
    - Analysis (분석)
    - Review (검토)
@@ -55,3 +50,5 @@ updated: 1724240339966
    - Legal Requirement (법적 요구사항)
    - Stakeholder Input (이해관계자 의견)
    - Market Research (시장 조사)
+
+**Requirement ID**, **Verification Method** ,**Requirement Name**는 필수 값 입니다.
